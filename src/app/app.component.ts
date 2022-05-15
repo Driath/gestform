@@ -1,22 +1,29 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent {
+export class AppComponent implements OnInit {
+  randomNumbers: number[] = [];
+
+  constructor() {}
+
+  ngOnInit(): void {
+    this.randomNumbers = this.generateRandomNumbers();
+  }
+
   public generateRandomNumbers(length = 8): number[] {
     const start = -1_000;
     return Array(length)
       .fill('')
-      .map(() => start + Math.random() * 2 * 1_000);
+      .map(() => start + Math.random() * 2 * 1_000)
+      .map(Math.ceil);
   }
 
   public manageNumber(n: number): string | number {
-    console.log('n => ', n);
     if (!n || !Number.isInteger(n)) {
-      console.log('SHOULD WORK ');
       throw new Error('Expected a number');
     }
 
