@@ -17,3 +17,6 @@ FROM mcr.microsoft.com/vscode/devcontainers/typescript-node:0-${VARIANT}
 
 # Permit to have ng cli to use code scaffolding
 RUN npm install -g @angular/cli
+
+# Eslint
+Run npm install -g eslint
