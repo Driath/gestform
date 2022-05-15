@@ -6,7 +6,10 @@
     "start": "ng serve",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
-    "test": "ng test"
+    "test": "ng test",
+    "docker:build": "docker build -t gestform-front .",
+    "docker:run": "docker run --name ng -p 80:80 gestform-front",
+    "docker:run:it": "docker run -it --rm --name ng -p 80:80 gestform-front /bin/sh"
   },
   "private": true,
   "dependencies": {
