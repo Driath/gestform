@@ -1,27 +1,22 @@
 # Gestform
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.5.
+## Requirement
 
-## Development server
+This project require
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- nodejs : https://nodejs.org/en/
+- docker : https://www.docker.com/
 
-## Build docker image
-
-Run `docker build -t gestform-front .` to build a "gestform-front" image
+PS: if you have docker, you can run this project into a devcontainer using VSCode
 
 ## Build
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The current docker build could not execute yet UT while building the image please make sure UT run on your environement before building image
 
-## Running unit tests
+`npm install && npm run test`
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+`npm run docker:build` will build a docker image with name "gestform-front"
 
-## Running end-to-end tests
+## Run build image
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+`npm run docker:run` will run into a container the image build with `npm run docker:build` on port 80
