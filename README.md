@@ -20,3 +20,11 @@ The current docker build could not execute yet UT while building the image pleas
 ## Run build image
 
 `npm run docker:run` will run into a container the image build with `npm run docker:build` on port 80
+
+## Develop
+
+`npm start`
+
+## Tests
+
+`npm test`
