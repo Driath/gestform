@@ -28,7 +28,7 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     const listNumber: number[] = app.generateRandomNumbers();
-    listNumber.forEach(number => expect(Number.isInteger(number)).toBeTrue())
+    listNumber.forEach(number => expect(Number.isInteger(number)).toBeTrue());
   });
 
   it('For a number N from the list number, if N is divisible per 3 return Geste', () => {
